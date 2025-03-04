@@ -1,19 +1,9 @@
+<html>
 
-import http.server
-import socketserver
-import webbrowser
+<body>
 
-PORT = 8000
-FILE_NAME = "Amirkhan CV MAIN china.pdf"
-
-class CustomHandler(http.server.SimpleHTTPRequestHandler):
-    def do_GET(self):
-        if self.path == f"/{FILE_NAME}":
-            self.path = f"/mnt/data/{FILE_NAME}"
-        return http.server.SimpleHTTPRequestHandler.do_GET(self)
-
-# Запуск локального сервера
-with socketserver.TCPServer(("", PORT), CustomHandler) as httpd:
-    print(f"Сервер запущен на http://localhost:{PORT}/{FILE_NAME}")
-    webbrowser.open(f"http://localhost:{PORT}/{FILE_NAME}")
-    httpd.serve_forever()
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfoOC4sK_w9GSmML8w58uAokMrKwyVSAz7ryKbvE44C3mpYxw/viewform?embedded=true" width="640" height="552" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    
+</body>
+    
+</html>
